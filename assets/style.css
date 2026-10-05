@@ -1,0 +1,162 @@
+:root {
+    --bg: #f4f5f7;
+    --surface: #ffffff;
+    --text: #1f2933;
+    --muted: #6b7280;
+    --border: #e1e4e8;
+    --primary: #2563eb;
+    --primary-hover: #1d4ed8;
+    --danger: #dc2626;
+    --success-bg: #ecfdf5;
+    --success-text: #065f46;
+    --error-bg: #fef2f2;
+    --error-text: #991b1b;
+    --radius: 10px;
+}
+
+* { box-sizing: border-box; }
+
+body {
+    margin: 0;
+    font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+    font-size: 16px;
+    line-height: 1.6;
+    color: var(--text);
+    background: var(--bg);
+}
+
+a { color: var(--primary); text-decoration: none; }
+a:hover { text-decoration: underline; }
+
+.container {
+    max-width: 760px;
+    margin: 0 auto;
+    padding: 0 16px;
+}
+
+/* Header & footer */
+.site-header {
+    background: var(--surface);
+    border-bottom: 1px solid var(--border);
+    margin-bottom: 24px;
+}
+.header-inner {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 8px;
+    padding-block: 14px;
+}
+.brand { font-size: 1.25rem; font-weight: 700; color: var(--text); }
+.brand:hover { text-decoration: none; }
+nav { display: flex; align-items: center; gap: 16px; }
+.nav-user { color: var(--muted); }
+.inline-form { display: inline; margin: 0; }
+
+.site-footer {
+    text-align: center;
+    color: var(--muted);
+    font-size: 0.875rem;
+    padding: 32px 0;
+}
+
+/* Cards */
+.card {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 20px 24px;
+    margin-bottom: 20px;
+}
+.auth-card { max-width: 420px; margin: 40px auto; }
+
+h1, h2, h3, h4 { margin-top: 0; line-height: 1.3; }
+.feed-heading { margin: 32px 0 16px; }
+
+/* Forms */
+label {
+    display: block;
+    font-weight: 600;
+    margin: 12px 0 4px;
+}
+input[type="text"],
+input[type="email"],
+input[type="password"],
+textarea {
+    width: 100%;
+    padding: 10px 12px;
+    font: inherit;
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    background: #fff;
+}
+input:focus, textarea:focus {
+    outline: none;
+    border-color: var(--primary);
+    box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.15);
+}
+textarea { resize: vertical; }
+
+.btn {
+    display: inline-block;
+    margin-top: 14px;
+    padding: 9px 18px;
+    font: inherit;
+    font-weight: 600;
+    border: 1px solid transparent;
+    border-radius: 6px;
+    cursor: pointer;
+    text-align: center;
+}
+.btn:hover { text-decoration: none; }
+.btn-primary { background: var(--primary); color: #fff; }
+.btn-primary:hover { background: var(--primary-hover); }
+.btn-secondary { background: #fff; color: var(--text); border-color: var(--border); }
+.btn-secondary:hover { background: var(--bg); }
+.btn-link {
+    background: none;
+    border: none;
+    color: var(--primary);
+    padding: 0;
+    margin: 0;
+    font: inherit;
+    cursor: pointer;
+}
+.btn-link:hover { text-decoration: underline; }
+.btn-link.danger { color: var(--danger); }
+.btn-block { width: 100%; }
+.actions { display: flex; flex-wrap: wrap; gap: 10px; }
+
+/* Alerts */
+.alert {
+    padding: 12px 16px;
+    border-radius: 6px;
+    margin-bottom: 16px;
+}
+.alert ul { margin: 0; padding-left: 20px; }
+.alert-success { background: var(--success-bg); color: var(--success-text); }
+.alert-error { background: var(--error-bg); color: var(--error-text); }
+
+/* Posts & comments */
+.post-header h3 { margin-bottom: 4px; }
+.meta { color: var(--muted); font-size: 0.875rem; }
+.edited { font-style: italic; color: var(--muted); }
+.post-content { margin: 14px 0; overflow-wrap: anywhere; }
+
+.comments {
+    border-top: 1px solid var(--border);
+    padding-top: 12px;
+}
+.comments h4 { font-size: 0.95rem; color: var(--muted); }
+.comment {
+    background: var(--bg);
+    border-radius: 6px;
+    padding: 8px 12px;
+    margin-bottom: 8px;
+}
+.comment p { margin: 4px 0 0; overflow-wrap: anywhere; }
+.comment-form .btn { margin-top: 8px; }
+
+.muted { color: var(--muted); }
+.center { text-align: center; }
